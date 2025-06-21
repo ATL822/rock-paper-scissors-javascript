@@ -4,34 +4,35 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Rock Paper Scissors</title>
+        <link rel="stylesheet" href="style.css">
     </head>
     
     <body>
         <script src="rock-paper-scissors.js" defer></script>
 
-        <div>
-            <h1>----ROCK-PAPER-SCISSORS----</h1>
+        <div class="header">
+            <h1>ROCK PAPER SCISSORS</h1>
             <p class="result-box">Make a selection and play a round!</p>
-            <p>Round wins:</p>
-            <p>
-                Computer: <b class="computer-win-counter">0</b>
-            </p>
-            <p>
-                Player: <b class="player-win-counter">0</b>
-            </p>
+            <div class="win-counter-box">
+                <h2>Score</h2>
+                <p>Computer: <b class="computer-win-counter">0</b></p>
+                <p>Player: <b class="player-win-counter">0</b></p>
+            </div>
         </div>
         
         <div class="selection-bar">
             <p class="bar-title">Make your selection!</p>
-            <button class="bar-button" id="rock" type="image">
-                <img src="./images/ui-elements/rock.png" alt="2D pixel art rock" id="rock">
-            </button>
-            <button class="bar-button" id="paper" type="image">
-                <img src="./images/ui-elements/paper.png" alt="2D pixel art paper" id="paper">
-            </button>
-            <button class="bar-button" id="scissors" type="image">
-                <img src="./images/ui-elements/scissors.png" alt="2D pixel art scissors" id="scissors">
-            </button>
+            <div class="button-box">
+                <button class="bar-button" id="rock" type="image">
+                    <img src="./images/ui-elements/rock.png" alt="2D pixel art rock" id="rock">
+                </button>
+                <button class="bar-button" id="paper" type="image">
+                    <img src="./images/ui-elements/paper.png" alt="2D pixel art paper" id="paper">
+                </button>
+                <button class="bar-button" id="scissors" type="image">
+                    <img src="./images/ui-elements/scissors.png" alt="2D pixel art scissors" id="scissors">
+                </button>
+            </div>
         </div>
 
         <div class="game-control-wrapper">

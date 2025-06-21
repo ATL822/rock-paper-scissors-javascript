@@ -66,12 +66,15 @@ selectionBar.addEventListener('click', (event) => {
     switch(target.id) {
         case 'rock':
             userChoice = 'rock';
+            displayPlayerSelection('rock');
             break;
         case 'paper':
             userChoice = 'paper';
+            displayPlayerSelection('paper');
             break;
         case 'scissors':
             userChoice = 'scissors';
+            displayPlayerSelection('scissors');
             break;
         default:
             userChoice = 'null';
@@ -124,3 +127,20 @@ function displayLastRoundResult(result) {
     
     return;
 };
+
+let previousSelection = '';
+function displayPlayerSelection(selection) {
+    let selectedButton = document.querySelector(`button #${selection}`);
+    selectedButton.style.border = '2px solid #4B352A';
+    selectedButton.style.borderRadius = '15%';
+    selectedButton.style.background = 'radial-gradient(#4B352A, #CA7842)'
+
+    if (selection !== previousSelection & previousSelection !== '') {
+        let previousButton = document.querySelector(`button #${previousSelection}`);
+        previousButton.style.border = '0px';
+        previousButton.style.borderRadius = '0px';
+        previousButton.style.background = ''
+    }
+
+    previousSelection = selection;
+}

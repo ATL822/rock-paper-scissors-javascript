@@ -31,7 +31,6 @@ function checkWinner(userChoice, computerChoice) {
 };
  
 function playRound() {
-    // Generate computer choice
     let computerChoice = convertChoiceToStr(generateComputerChoice());
     console.log(`computerChoice: ${computerChoice}`);
     console.log(`userChoice: ${userChoice}`);

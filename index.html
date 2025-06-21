@@ -7,17 +7,30 @@
     </head>
     
     <body>
-        <script src="rock-paper-scissors.js"></script>
-        
-        <div>
-            <p>Make your selection!</p>
-            <button onclick="updateUserChoice(1)">Select Rock</button>
-            <button onclick="updateUserChoice(2)">Select Paper</button>
-            <button onclick="updateUserChoice(3)">Select Scissors</button>
-        </div>
+        <script src="rock-paper-scissors.js" defer></script>
 
         <div>
-            <button onclick="playRound()">Play Round!</button>
+            <h1>----ROCK-PAPER-SCISSORS----</h1>
+            <p class="result-box">Make a selection and play a round!</p>
+            <p>Round wins:</p>
+            <p>
+                Computer: <b class="computer-win-counter">0</b>
+            </p>
+            <p>
+                Player: <b class="player-win-counter">0</b>
+            </p>
+        </div>
+        
+        <div class="selection-bar">
+            <p class="bar-title">Make your selection!</p>
+            <button class="bar-button" id="rock">Select Rock</button>
+            <button class="bar-button" id="paper">Select Paper</button>
+            <button class="bar-button" id="scissors">Select Scissors</button>
+        </div>
+
+        <div class="game-control-wrapper">
+            <button class="play-button">Play Round!</button>
+            <button class="reset-button">Reset Game</button>
         </div>
 
     </body>
